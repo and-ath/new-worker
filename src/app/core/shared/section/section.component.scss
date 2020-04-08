@@ -9,6 +9,10 @@ section {
     background: #222222;
   }
 
+  &.white {
+    background: white;
+  }
+
   &.mat-orange {
     color: white;
     background: mat-color(mat-palette($mat-orange));

@@ -19,6 +19,8 @@ import { AngularFireFunctionsModule } from '@angular/fire/functions';
 import { SharedModule } from './core/shared/shared.module';
 import { MaterialModule } from './core/module/material/material.module';
 import { ServicesModule } from './services/services.module';
+import { OfficersComponent } from './home/officers/officers.component';
+import { MissionComponent } from './home/mission/mission.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { ServicesModule } from './services/services.module';
     HeaderComponent,
     HomeComponent,
     ServicesComponent,
+    OfficersComponent,
+    MissionComponent,
   ],
   imports: [
     BrowserModule,

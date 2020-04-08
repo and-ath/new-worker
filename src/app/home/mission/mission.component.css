@@ -1,0 +1,8 @@
+  .center {
+    position: relative;
+    color: black;
+    font-size: 100%;
+    font-family: HelveticaNeue-CondensedBold;
+    font-weight: bold;
+    z-index: 1;
+  }

@@ -1,7 +1,7 @@
-<app-section>
-    <h2 class="bold-heading">
+<app-section [color]="'white'">
+    <h3 class="bold-heading">
       COMPANY
-    </h2>
+    </h3>
     <img fxFill src="assets/images/logo_right.svg" />
     <div>
       <dl>
@@ -9,7 +9,7 @@
           <ng-container *ngSwitchDefault>会社名</ng-container>
         </dt>
         <dd [ngSwitch]="''">
-          <ng-container *ngSwitchDefault>株式会社xxx</ng-container>
+          <ng-container *ngSwitchDefault>株式会社& ath</ng-container>
         </dd>
       </dl>
       <dl>
@@ -18,7 +18,8 @@
         </dt>
         <dd [ngSwitch]="''">
           <ng-container *ngSwitchDefault>
-            東京xxx
+            〒150-0044<br>
+            東京都渋谷区円山町5番5号 Navi渋谷Ⅴ 3階
           </ng-container>
         </dd>
       </dl>
@@ -27,7 +28,7 @@
           <ng-container *ngSwitchDefault>設立</ng-container>
         </dt>
         <dd [ngSwitch]="''">
-          <ng-container *ngSwitchDefault>2020年x月</ng-container>
+          <ng-container *ngSwitchDefault>2020年4月</ng-container>
         </dd>
       </dl>
       <dl>
@@ -35,15 +36,15 @@
           <ng-container *ngSwitchDefault>会計期間</ng-container>
         </dt>
         <dd [ngSwitch]="''">
-          <ng-container *ngSwitchDefault>1月〜12月</ng-container>
+          <ng-container *ngSwitchDefault>4月〜3月</ng-container>
         </dd>
       </dl>
       <dl>
         <dt [ngSwitch]="''">
-          <ng-container *ngSwitchDefault>代表取締役</ng-container>
+          <ng-container *ngSwitchDefault>代表取締役社長</ng-container>
         </dt>
         <dd [ngSwitch]="''">
-          <ng-container *ngSwitchDefault>下島健</ng-container>
+          <ng-container *ngSwitchDefault>三保 将司</ng-container>
         </dd>
       </dl>
     </div>
