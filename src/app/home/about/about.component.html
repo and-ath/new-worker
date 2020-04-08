@@ -1,0 +1,51 @@
+<app-section>
+    <h2 class="bold-heading">
+      COMPANY
+    </h2>
+    <img fxFill src="assets/images/logo_right.svg" />
+    <div>
+      <dl>
+        <dt [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>会社名</ng-container>
+        </dt>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>株式会社xxx</ng-container>
+        </dd>
+      </dl>
+      <dl>
+        <dt [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>本社所在地</ng-container>
+        </dt>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>
+            東京xxx
+          </ng-container>
+        </dd>
+      </dl>
+      <dl>
+        <dt [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>設立</ng-container>
+        </dt>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>2020年x月</ng-container>
+        </dd>
+      </dl>
+      <dl>
+        <dt [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>会計期間</ng-container>
+        </dt>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>1月〜12月</ng-container>
+        </dd>
+      </dl>
+      <dl>
+        <dt [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>代表取締役</ng-container>
+        </dt>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>下島健</ng-container>
+        </dd>
+      </dl>
+    </div>
+  </app-section>
+  

@@ -1,0 +1,28 @@
+<app-section [color]="'black'">
+    <footer class="container">
+      <div fxLayout="row" fxLayoutGap="16px grid">
+        <div fxFlex="50">
+          <ul>
+            <li>
+              <a [routerLink]="'/terms'">プライバシーポリシー</a>
+            </li>
+          </ul>
+        </div>
+        <div fxFlex="50">
+          <p class="copy-right">&copy; 株式会社xxx</p>
+          <div fxLayout="row">
+            <div>
+              <a
+                mat-icon-button
+                href=""
+                target="_blank"
+              >
+                <img class="icon" src="assets/images/twitter.svg" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </app-section>
+  
