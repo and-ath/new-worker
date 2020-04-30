@@ -17,4 +17,5 @@ mat-progress-spinner {
   font-family: 'HelveticaNeue-CondensedBold';
   font-weight: bold;
   text-align: center;
+  margin-bottom: 50px!important;
 }
