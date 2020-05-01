@@ -10,4 +10,13 @@
   .officer-wrapper:hover .officer-image {
     opacity: 1;
   }
+
+  mat-card-title {
+    text-align: center!important;
+  }
   
+  .item {
+    width: 400px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
