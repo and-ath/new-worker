@@ -9,12 +9,13 @@
   
   .mat-card-image {
     object-fit: cover;
-    height: 210px;
+    height: 190px;
   }
 
   mat-card-title {
     text-align: center;
     font-size: 20px;
+    font-weight: bold
   }
 
   mat-card-content {
