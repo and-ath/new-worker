@@ -1,17 +1,8 @@
-import * as functions from "firebase-functions";
-import * as admin from "firebase-admin";
-import { mail } from "./mails";
+import * as functions from 'firebase-functions';
 
-admin.initializeApp({
-  credential: admin.credential.cert(
-    JSON.parse(
-      JSON.stringify(functions.config().service_account).replace(
-        /\\\\n/g,
-        "\\n"
-      )
-    )
-  ),
-  databaseURL: functions.config().admin.database_url
-});
-
-export const mail_send = mail.send;
+// // Start writing Firebase Functions
+// // https://firebase.google.com/docs/functions/typescript
+//
+// export const helloWorld = functions.https.onRequest((request, response) => {
+//  response.send("Hello from Firebase!");
+// });
