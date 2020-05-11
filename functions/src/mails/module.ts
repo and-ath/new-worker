@@ -39,7 +39,7 @@ ${data.body}`;
             type: data.type
           }
         },
-        (error, response, body_) => {
+        (error:any, response:any, body_:any) => {
           if (error) {
             reject(error);
             return;
