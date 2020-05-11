@@ -1,0 +1,26 @@
+header {
+    background-image: url('src/assets/images/luster/fan-at-basketball-game.jpg');
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
+  header::before{
+    /* 透過した黒を上から重ねるイメージ */
+    background-color: rgba(0,0,0,0.4);
+    /* 自由に位置指定 */
+    position: absolute;
+    content: ' ';
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .heading {
+    position: relative;
+    color:white;
+    font-size: 300%;
+    font-family: HelveticaNeue-CondensedBold;
+    font-weight: bold;
+    z-index: 1;
+    letter-spacing: 0.1em
+  }
+

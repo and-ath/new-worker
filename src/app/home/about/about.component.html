@@ -1,0 +1,35 @@
+<app-section [color]="'white'">
+    <h3 class="bold-heading">
+      COMPANY
+    </h3>
+    <div class="information">
+      <img src="assets/images/luster/&athlogo.jpg" width="154" height="104"/>
+      <dl>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>株式会社& ath</ng-container>
+        </dd>
+      </dl>
+      <dl>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>
+            〒150-0044<br>
+            東京都渋谷区円山町5番5号 Navi渋谷Ⅴ 3階
+          </ng-container>
+        </dd>
+      </dl>
+      <dl>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>2020年4月 設立</ng-container>
+        </dd>
+      </dl>
+      <!-- <dl>
+        <dt [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>代表取締役社長</ng-container>
+        </dt>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>三保 将司</ng-container>
+        </dd>
+      </dl> -->
+    </div>
+  </app-section>
+  
