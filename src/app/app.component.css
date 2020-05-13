@@ -3,7 +3,8 @@ mat-toolbar {
   }
 
   h2 {
-      font-family: Marion-Bold;
-      color: rgb(31,66,123);
+    font-size: 30px;
+    font-family: Marion-Bold;
+    color: rgb(31,66,123);
   }
   
