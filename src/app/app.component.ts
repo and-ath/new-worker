@@ -9,7 +9,7 @@ import { TitleService } from 'angular-firebase-template';
 })
 export class AppComponent implements OnInit {
   constructor(private router: Router, private title: TitleService) {
-    this.title.baseTitle = 'Monster English';
+    this.title.baseTitle = '&ath';
   }
 
   ngOnInit() {
