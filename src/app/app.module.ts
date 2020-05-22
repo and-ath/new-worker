@@ -26,6 +26,7 @@ import { MissionComponent } from './home/mission/mission.component';
 
 import { AngularFirebaseTemplateModule } from 'angular-firebase-template';
 import { VisionComponent } from './home/vision/vision.component';
+import { TermsComponent } from './terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { VisionComponent } from './home/vision/vision.component';
     OfficersComponent,
     MissionComponent,
     VisionComponent,
+    TermsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,74 @@
+<app-section [color]="'mat-white'">
+    <h2 class="bold-heading" [ngSwitch]="''">
+      <ng-container *ngSwitchDefault>スカウティングサービス
+      </ng-container>
+    </h2>
+    <p>
+      スポーツ選手がスカウトの目に止まるには、スカウトが選手を直接見ることでしか実現しない。
+      <br />
+      アナログなスカウトの世界を、段階的にIT化し、優秀な選手がよりスカウトの目に止まるような世界を実現する。
+      <br />
+    </p>
+    <button mat-button color="primary" routerLink="/company/contact">
+      お問い合わせはこちら
+    </button>
+    <h2 class="bold-heading" [ngSwitch]="''">
+      <ng-container *ngSwitchDefault>特徴</ng-container>
+    </h2>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="space-around start">
+      <div fxFlex="100">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>費用</mat-card-title>
+            <mat-card-subtitle>無料</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div fxFlex="100">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>to スポーツ選手</mat-card-title>
+            <mat-card-subtitle>サービス使用方法</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              お問い合わせフォームから、以下の内容をお送りくださいませ。
+            <br>
+            ・名前
+            <br>
+            ・年齢
+            <br>
+            ・高校名
+            <br>
+            ・自己PR
+            <br>
+            ・Youtubeの動画リンク
+            <br>
+            ※練習動画や試合の様子を、非公開設定した上でYoutubeに投稿してくださいませ。
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div fxFlex="100">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>to スカウトマン</mat-card-title>
+            <mat-card-subtitle>サービス使用方法</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              お問い合わせフォームから、以下の内容をお送りくださいませ。
+            <br>
+            ・名前
+            <br>
+            ・所属団体名
+            <br>
+            ・どのような選手をスカウトしたいのか詳細
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </app-section>

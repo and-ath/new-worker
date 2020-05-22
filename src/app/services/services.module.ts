@@ -6,10 +6,12 @@ import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from '../core/shared/shared.module';
 import { MaterialModule } from '../core/module/material/material.module';
+import { ScoutingComponent } from './scouting/scouting.component';
 
 @NgModule({
   declarations: [
     SpoRyuComponent,
+    ScoutingComponent,
   ],
   imports: [
     CommonModule,
