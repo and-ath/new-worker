@@ -4,7 +4,16 @@
   </mat-sidenav>
   <mat-sidenav-content class="sidenav-content" id="sidenav-content">
     <mat-toolbar class="mat-elevation-z4 toolbar">
+      <a mat-button [routerLink]="''">
       <h2>& ath</h2>
+      </a>
+      <span fxFlex="1 1 auto"></span>
+      <a mat-button [routerLink]="''">
+        <span>Home</span>
+      </a>
+      <a mat-button [routerLink]="'/company/contact'">
+        <span>Contact</span>
+      </a>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

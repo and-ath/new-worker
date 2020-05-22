@@ -8,7 +8,7 @@ import { TitleService } from 'angular-firebase-template';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router, private title: TitleService) {
+  constructor(private router: Router, public title: TitleService) {
     this.title.baseTitle = '&ath';
   }
 
