@@ -14,7 +14,7 @@ const mailTransport = nodemailer.createTransport({
   }
 });
 
-export const send = functions.https.onCall(
+export const send = functions.region('asia-northeast1').https.onCall(
     async (
       data: {
         lang: string;
