@@ -5,10 +5,11 @@ import { ApiService } from 'src/app/core/services/api.service';
 import { Router } from '@angular/router';
 
 enum SubjectTypes {
+  SCOUTING,
   SPO_RYU,
   SECOND_CAREER,
   SALES,
-  OTHERS,
+  INFO
 }
 
 @Component({
@@ -38,14 +39,21 @@ export class ContactComponent implements OnInit {
 
     this.loadingDialog.open(message$);
 
-    let type: 'sales' | 'info';
+    let type: 'scouting' | 'sporyu' | 'secondcareer' | 'sales' | 'info';
     switch (subjectType) {
+      case SubjectTypes.SCOUTING:
+        type = 'scouting';
+        break;
       case SubjectTypes.SPO_RYU:
+        type = 'sporyu';
+        break;
       case SubjectTypes.SECOND_CAREER:
+        type = 'secondcareer';
+        break;
       case SubjectTypes.SALES:
         type = 'sales';
         break;
-      case SubjectTypes.OTHERS:
+      case SubjectTypes.INFO:
         type = 'info';
         break;
     }

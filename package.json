@@ -23,6 +23,7 @@
     "@angular/platform-browser": "~9.0.0",
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
+    "@sendgrid/mail": "^7.1.1",
     "@types/stripe-v3": "^3.1.15",
     "algoliasearch": "^4.0.1",
     "angular-firebase-template": "^0.2.2",

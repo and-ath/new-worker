@@ -13,7 +13,7 @@ export class ApiService {
     email: string,
     subject: string,
     body: string,
-    type: 'sales' | 'info',
+    type: 'scouting' | 'sporyu' | 'secondcareer' | 'sales' | 'info'
   ) {
     return this.functions
       .httpsCallable('mail_send')({

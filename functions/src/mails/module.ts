@@ -1,66 +1,32 @@
 import * as functions from "firebase-functions";
+import * as sgMail from '@sendgrid/mail';
 
+const API_KEY = functions.config().sendgrid.key;
 
-const nodemailer = require("nodemailer");
-const gmailEmail = functions.config().gmail.email;
-const gmailPassword = functions.config().gmail.password;
-const adminEmail = functions.config().admin.email;
+sgMail.setApiKey(API_KEY);
 
 // 送信に使用するメールサーバーの設定
-const mailTransport = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: gmailEmail,
-    pass: gmailPassword
-  }
-});
 
-export const send = functions.region('asia-northeast1').https.onCall((response) =>
+export const sendEmail = functions.region('asia-northeast1').https.onCall(
+    (data, context) => {
+        return (content: {
+            to: string;
+            cc: string;
+            from: string;
+            templateId: string;
+            dynamic_template_data: {};
+        }) => {
+            content.to = data.name;
+            content.cc = 'info@and-ath.com';
+            content.from = 'noreply@and-ath.com';
+            content.templateId = 'd-36df7bcc51cc4417ba6169091c72e730';
+            content.dynamic_template_data = {
+                name: data.name,
+                subject: data.subject,
+                body: data.body,
+            };
 
-    async (
-      data: {
-        lang: string;
-        email: string;
-        name: string;
-        subject: string;
-        body: string;
-        type: "sales" | "support" | "info";
-      },
-      context: any
-    ) => {
-      const body =
-        data.lang === "en"
-          ? `Dear ${data.name}.
-  Your inquiry has been submitted.
-  Thanks for your inquiry.
-  
-  Inquiry details:
-  ${data.body}`
-          : `${data.name}様
-  お問い合わせを送信しました。
-  お問い合わせいただきありがとうございます。
-  
-  お問い合わせ内容:
-  ${data.body}`;
-
-  response.header('Access-Control-Allow-Origin', '*')
-
-  await new Promise<void>(() => {
-
-        let adminMail = {
-            to: adminEmail,
-            email: data.email,
-            subject: data.subject,
-            body: body,
-            type: data.type
-        };
-
-        try {
-           mailTransport.sendMail(adminMail);
-        } catch (e) {
-            console.error(`send failed. ${e}`);
-            throw new functions.https.HttpsError('internal', 'send failed');
-          }
-    });
-    }
-);
+          return sgMail.send(content); 
+        }
+      }
+    );

@@ -3,4 +3,4 @@ import { mail } from "./mails";
 
 admin.initializeApp({});
 
-export const mail_send = mail.send;
+export const mail_send = mail.sendEmail;
