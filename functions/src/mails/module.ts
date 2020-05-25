@@ -13,19 +13,22 @@ export const sendEmail = functions.region('asia-northeast1').https.onCall(
             to: string;
             cc: string;
             from: string;
+            subject: string;
             templateId: string;
             dynamic_template_data: {};
         }) => {
             content.to = data.name;
             content.cc = 'info@and-ath.com';
             content.from = 'noreply@and-ath.com';
+            content.subject = '株式会社&ath';
             content.templateId = 'd-36df7bcc51cc4417ba6169091c72e730';
             content.dynamic_template_data = {
                 name: data.name,
                 subject: data.subject,
                 body: data.body,
             };
-
+          console.log(sgMail);
+          console.log(content);
           return sgMail.send(content); 
         }
       }
