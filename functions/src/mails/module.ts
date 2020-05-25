@@ -11,7 +11,7 @@ export const sendEmail = functions.region('asia-northeast1').https.onCall(
             to : data.email,
             cc : 'info@and-ath.com',
             from : 'noreply@and-ath.com',
-            subject : '株式会社&ath',
+            subject : '株式会社and-ath',
             templateId : 'd-36df7bcc51cc4417ba6169091c72e730',
             dynamic_template_data : {
                 name: data.name,
