@@ -17,7 +17,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireFunctionsModule } from '@angular/fire/functions';
+import { AngularFireFunctionsModule, REGION } from '@angular/fire/functions';
 import { SharedModule } from './core/shared/shared.module';
 import { MaterialModule } from './core/module/material/material.module';
 import { ServicesModule } from './services/services.module';
@@ -57,7 +57,9 @@ import { TermsComponent } from './terms/terms.component';
     CompanyModule,
     ServicesModule
   ],
-  providers: [],
+  providers: [
+    { provide: REGION, useValue: 'asia-northeast1' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
