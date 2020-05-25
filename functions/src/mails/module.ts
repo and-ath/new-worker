@@ -1,5 +1,6 @@
 import * as functions from "firebase-functions";
 
+
 const nodemailer = require("nodemailer");
 const gmailEmail = functions.config().gmail.email;
 const gmailPassword = functions.config().gmail.password;
@@ -14,7 +15,8 @@ const mailTransport = nodemailer.createTransport({
   }
 });
 
-export const send = functions.region('asia-northeast1').https.onCall(
+export const send = functions.region('asia-northeast1').https.onCall((response) =>
+
     async (
       data: {
         lang: string;
@@ -24,7 +26,7 @@ export const send = functions.region('asia-northeast1').https.onCall(
         body: string;
         type: "sales" | "support" | "info";
       },
-      context
+      context: any
     ) => {
       const body =
         data.lang === "en"
@@ -40,6 +42,8 @@ export const send = functions.region('asia-northeast1').https.onCall(
   
   お問い合わせ内容:
   ${data.body}`;
+
+  response.header('Access-Control-Allow-Origin', '*')
 
   await new Promise<void>(() => {
 
