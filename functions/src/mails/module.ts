@@ -15,7 +15,6 @@ export const sendEmail = functions.region('asia-northeast1').https.onCall(
             templateId : 'd-36df7bcc51cc4417ba6169091c72e730',
             dynamic_template_data : {
                 name: data.name,
-                subject: data.subject,
                 body: data.body,
             }
           }
