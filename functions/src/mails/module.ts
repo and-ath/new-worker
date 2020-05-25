@@ -5,10 +5,10 @@ const API_KEY = functions.config().sendgrid.key;
 
 sgMail.setApiKey(API_KEY);
 
-export const sendEmail = functions.https.onCall(
+export const sendEmail = functions.region('asia-northeast1').https.onCall(
   async (data, context) => {
         const content = {
-            to : data.name,
+            to : data.email,
             cc : 'info@and-ath.com',
             from : 'noreply@and-ath.com',
             subject : '株式会社&ath',
@@ -21,7 +21,15 @@ export const sendEmail = functions.https.onCall(
           }
           console.log(sgMail);
           console.log(content);
-          const result = await sgMail.send(content);
-          return result
+          try {
+            const result = await sgMail.send(content);
+            return result
+          } catch (error) {
+            console.error(error);
+            if(error.response) {
+              console.error(error.response.body)
+            }
+            return null
+          }
         }
     );
