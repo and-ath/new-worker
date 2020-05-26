@@ -9,7 +9,7 @@ export const sendEmail = functions.region('asia-northeast1').https.onCall(
   async (data, context) => {
         const content = {
             to : data.email,
-            cc : 'info@and-ath.com',
+            cc : 'masashi.miho@and-ath.com',
             from : 'noreply@and-ath.com',
             subject : '株式会社and-ath',
             templateId : 'd-36df7bcc51cc4417ba6169091c72e730',
