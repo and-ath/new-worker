@@ -12,7 +12,7 @@ export const sendEmail = functions.region('asia-northeast1').https.onCall(
             cc : 'info@and-ath.com',
             from : 'noreply@and-ath.com',
             subject : '株式会社and-ath',
-            templateId : 'd-36df7bcc51cc4417ba6169091c72e730',
+            templateId : 'd-6f4a65ae7c454563948a343a76541f65',
             dynamic_template_data : {
                 name: data.name,
                 body: data.body,
