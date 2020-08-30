@@ -32,4 +32,9 @@ section {
     color: white;
     background: mat-color(mat-palette($mat-pink));
   }
+
+  &.mat-light-green {
+    color: white;
+    background: mat-color(mat-palette($mat-light-green));
+  }
 }

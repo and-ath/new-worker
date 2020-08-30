@@ -8,7 +8,6 @@ import { CompanyModule } from './company/company.module';
 import { FooterComponent } from './home/footer/footer.component';
 import { HeaderComponent } from './home/header/header.component';
 import { HomeComponent } from './home/home.component';
-import { ServicesComponent } from './home/services/services.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FormsModule } from '@angular/forms';
@@ -20,13 +19,14 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireFunctionsModule, REGION } from '@angular/fire/functions';
 import { SharedModule } from './core/shared/shared.module';
 import { MaterialModule } from './core/module/material/material.module';
-import { ServicesModule } from './services/services.module';
-import { OfficersComponent } from './home/officers/officers.component';
-import { MissionComponent } from './home/mission/mission.component';
 
 import { AngularFirebaseTemplateModule } from 'angular-firebase-template';
-import { VisionComponent } from './home/vision/vision.component';
 import { TermsComponent } from './terms/terms.component';
+import { RecruitsComponent } from './home/recruits/recruits.component';
+import { VoicesComponent } from './home/voices/voices.component';
+import { QuestionComponent } from './home/question/question.component';
+import { FeaturesComponent } from './home/features/features.component';
+import { PartnersComponent } from './home/partners/partners.component';
 
 @NgModule({
   declarations: [
@@ -35,11 +35,12 @@ import { TermsComponent } from './terms/terms.component';
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    ServicesComponent,
-    OfficersComponent,
-    MissionComponent,
-    VisionComponent,
     TermsComponent,
+    RecruitsComponent,
+    VoicesComponent,
+    QuestionComponent,
+    FeaturesComponent,
+    PartnersComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +56,6 @@ import { TermsComponent } from './terms/terms.component';
     SharedModule,
     MaterialModule,
     CompanyModule,
-    ServicesModule
   ],
   providers: [
     { provide: REGION, useValue: 'asia-northeast1' }

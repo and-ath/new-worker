@@ -1,0 +1,39 @@
+<app-section [color]="'mat-light-green'">
+  <h3 class="bold-heading">Features</h3>
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <div
+      fxLayout="row wrap"
+      fxLayoutGap="5px grid"
+      fxLayoutAlign="space-around start"
+    >
+      <div class="item" fxFlex.xs="100">
+        <lib-ripple-card>
+          <mat-card-title>稼働率を自分で決められる</mat-card-title>
+          <P
+            >希望稼働率を決めることで、それに見合った案件だけを提案</P
+          >
+        </lib-ripple-card>
+      </div>
+      <div class="item" fxFlex.xs="100">
+        <lib-ripple-card>
+          <mat-card-title color="primary">徹底した商流制限</mat-card-title>
+          <P
+            >徹底的な商流制限をした厳選した案件ばかりを紹介可能</P
+          >
+        </lib-ripple-card>
+      </div>
+      <div class="item" fxFlex.xs="100">
+        <lib-ripple-card>
+          <mat-card-title>適切な給与を獲得できる</mat-card-title>
+          <P>商流制限をしているので、見合った単価を獲得することが可能</P>
+        </lib-ripple-card>
+      </div>
+    </div>
+
+    <img
+      fxFlex.lt-md="30%"
+      class="features-img"
+      src="assets/images/luster/Visual-data-bro.png"
+    />
+  </div>
+</app-section>

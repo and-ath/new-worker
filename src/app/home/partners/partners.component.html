@@ -1,0 +1,22 @@
+<app-section [color]="'light-green'">
+    <h2 class="bold-heading">導入企業様</h2>
+    <div
+      fxLayout="row wrap"
+      fxLayoutGap="16px grid"
+      fxLayoutAlign="space-around center"
+    >
+      <ng-container
+        *ngFor="
+          let e of []
+        "
+      >
+        <div>
+          <div matRipple>
+            <a href="{{ e[0] }}" target="_blank">
+              <img class="partner-image" alt="{{ e[1] }}" src="{{ e[2] }}" />
+            </a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </app-section>

@@ -15,9 +15,10 @@ mat-progress-spinner {
 
 .bold-heading {
   font-size: 30px;
-  font-family: 'HelveticaNeue-CondensedBold';
+  font-family: 'Noto Sans JP';
   font-weight: bold;
   text-align: center;
   margin-bottom: 50px!important;
   margin-top: 50px!important;
+  color: #333333;
 }

@@ -11,11 +11,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('./company/company.module').then((m) => m.CompanyModule),
   },
-  {
-    path: 'services',
-    loadChildren: () =>
-      import('./services/services.module').then((m) => m.ServicesModule),
-  },
 ];
 
 @NgModule({

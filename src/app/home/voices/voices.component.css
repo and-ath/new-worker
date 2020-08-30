@@ -1,0 +1,19 @@
+
+.item a {
+    text-decoration: none;
+  }
+  
+  .mat-card-image {
+    object-fit: cover;
+    height: 190px;
+  }
+
+  mat-card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  mat-card-content {
+    color: black;
+    margin-bottom: 24px;
+  }
