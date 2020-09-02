@@ -27,6 +27,12 @@ import { VoicesComponent } from './home/voices/voices.component';
 import { QuestionComponent } from './home/question/question.component';
 import { FeaturesComponent } from './home/features/features.component';
 import { PartnersComponent } from './home/partners/partners.component';
+import { RecruitersFeaturesComponent } from './recruiters/features/features.component';
+import { RecruitersFooterComponent } from './recruiters/footer/footer.component';
+import { RecruitersHeaderComponent } from './recruiters/header/header.component';
+import { RecruitersQuestionComponent } from './recruiters/question/question.component';
+import { RecruitersComponent } from './recruiters/recruiters.component';
+import { RecruitersContactComponent } from './recruiters/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +47,12 @@ import { PartnersComponent } from './home/partners/partners.component';
     QuestionComponent,
     FeaturesComponent,
     PartnersComponent,
+    RecruitersComponent,
+    RecruitersFeaturesComponent,
+    RecruitersFooterComponent,
+    RecruitersHeaderComponent,
+    RecruitersQuestionComponent,
+    RecruitersContactComponent
   ],
   imports: [
     BrowserModule,

@@ -13,8 +13,9 @@ export class ApiService {
     email: string,
     subject: string,
     body: string,
-    file,
-    type: 'few' | 'afew' | 'some' | 'more' | 'full' | 'info'
+    file?: string,
+    type?: 'few' | 'afew' | 'some' | 'more' | 'full' | 'info',
+    typeRec?: 'sale' | 'info',
   ) {
     return this.functions
       .httpsCallable('mail_send')({
@@ -25,6 +26,7 @@ export class ApiService {
         body,
         file,
         type,
+        typeRec
       })
       .toPromise();
   }

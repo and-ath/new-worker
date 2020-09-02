@@ -1,0 +1,96 @@
+<app-section>
+    <h2 class="bold-heading">CONTACT</h2>
+    <form
+      #form="ngForm"
+      (submit)="
+        onSubmit(
+          name.value,
+          email.value,
+          subject.value[0],
+          body.value,
+          subject.value[1]
+        )
+      "
+    >
+      <mat-form-field fxFill>
+        <mat-label >
+          <ng-container>お名前（企業名）</ng-container>
+        </mat-label>
+        <input #name matInput required ngModel name="name" />
+      </mat-form-field>
+      <mat-form-field fxFill>
+        <mat-label>
+          <ng-container>メールアドレス</ng-container>
+        </mat-label>
+        <input #email matInput required type="email" ngModel name="email" />
+      </mat-form-field>
+      <mat-form-field fxFill>
+        <mat-label>
+          <ng-container>件名</ng-container>
+        </mat-label>
+        <mat-select
+          #subject
+          matInput
+          required
+          ngModel
+          name="subject"
+        >
+          <ng-container>
+            <mat-option
+            [value]="[
+              'sale',
+              subjectTypes.SALE
+            ]"
+            >申し込み
+          </mat-option>
+            <mat-option
+              [value]="[
+                'info',
+                subjectTypes.INFO
+              ]"
+              >その他
+            </mat-option>
+          </ng-container>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field fxFill>
+        <mat-label>
+          <ng-container>
+            何かご質問・ご要望あればお書きください
+          </ng-container>
+        </mat-label>
+        <textarea
+          #body
+          rows="12"
+          style="resize: none;"
+          matInput
+          required
+          ngModel
+          name="body"
+        ></textarea>
+      </mat-form-field>
+      <div fxLayout="row">
+        <div>
+          <mat-checkbox fxFill required ngModel name="agree">
+            <ng-container>
+              プライバシーポリシーに同意する
+            </ng-container>
+          </mat-checkbox>
+        </div>
+        <span fxFlex="1 1 auto"></span>
+        <a routerLink="/terms">
+          <ng-container>プライバシーポリシー</ng-container>
+        </a>
+      </div>
+  
+      <button
+        mat-raised-button
+        fxFill
+        [color]="'accent'"
+        [disabled]="form.invalid"
+      >
+        <ng-container>送信する</ng-container>
+      </button>
+    </form>
+  </app-section>
+  

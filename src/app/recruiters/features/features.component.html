@@ -1,0 +1,40 @@
+<app-section [color]="'mat-light-green'">
+    <h3 class="bold-heading">Features</h3>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <div
+        fxLayout="row wrap"
+        fxLayoutGap="5px grid"
+        fxLayoutAlign="space-around start"
+      >
+        <div class="item" fxFlex.xs="100">
+          <lib-ripple-card>
+            <mat-card-title>稼働率の提案</mat-card-title>
+            <P
+              >希望稼働率を決めることで、フリーランスとのより適切なマッチングを生み出す</P
+            >
+          </lib-ripple-card>
+        </div>
+        <div class="item" fxFlex.xs="100">
+          <lib-ripple-card>
+            <mat-card-title color="primary">徹底した商流制限</mat-card-title>
+            <P
+              >弊社に直接提携、または弊社に所属する優秀な方のみ提案させて頂きます</P
+            >
+          </lib-ripple-card>
+        </div>
+        <div class="item" fxFlex.xs="100">
+          <lib-ripple-card>
+            <mat-card-title>単価に見合った働き</mat-card-title>
+            <P>商流制限をしているので、単価に大きなズレのないフリーランスと出会うことができる</P>
+          </lib-ripple-card>
+        </div>
+      </div>
+  
+      <img
+        fxFlex.lt-md="30%"
+        class="features-img"
+        src="assets/images/luster/pair-programming-amico.png"
+      />
+    </div>
+  </app-section>
+  
