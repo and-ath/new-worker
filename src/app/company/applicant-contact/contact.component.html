@@ -8,6 +8,7 @@
           email.value,
           subject.value[0],
           body.value,
+          file.value,
           subject.value[1]
         )
       "
@@ -82,16 +83,12 @@
           </ng-container>
         </mat-select>
       </mat-form-field>
-      <!-- <mat-form-field fxFill>
-        <mat-label [ngSwitch]="''">
-          <ng-container *ngSwitchDefault>スキルシート</ng-container>
-        </mat-label>
-        <input #file matInput required type="file" ngModel name="file">
-      </mat-form-field> -->
+      ※スキルシートを添付してください。<br>
+      <input #file type="file" required ndModel (change)="handleFileInput($event.target.files)">
       <mat-form-field fxFill>
         <mat-label [ngSwitch]="''">
           <ng-container *ngSwitchDefault>
-            メッセージを入力してください
+            何かご質問・ご要望あればお書きください
           </ng-container>
         </mat-label>
         <textarea

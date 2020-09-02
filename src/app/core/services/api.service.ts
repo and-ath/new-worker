@@ -13,6 +13,7 @@ export class ApiService {
     email: string,
     subject: string,
     body: string,
+    file,
     type: 'few' | 'afew' | 'some' | 'more' | 'full' | 'info'
   ) {
     return this.functions
@@ -22,6 +23,7 @@ export class ApiService {
         email,
         subject,
         body,
+        file,
         type,
       })
       .toPromise();

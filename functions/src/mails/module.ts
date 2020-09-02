@@ -1,7 +1,11 @@
 import * as functions from "firebase-functions";
 import * as sgMail from '@sendgrid/mail';
+import * as fs from "fs";
 
 const API_KEY = functions.config().sendgrid.key;
+
+const pathToAttachment = `${__dirname}/attachment.pdf`;
+const attachment = fs.readFileSync(pathToAttachment).toString("base64");
 
 sgMail.setApiKey(API_KEY);
 
@@ -16,7 +20,15 @@ export const sendEmail = functions.region('asia-northeast1').https.onCall(
             dynamic_template_data : {
                 name: data.name,
                 body: data.body,
-            }
+            },
+            attachments: [
+              {
+                content: attachment,
+                filename: "attachment.pdf",
+                type: "application/pdf",
+                disposition: "attachment"
+              }
+            ]
           }
           console.log(sgMail);
           console.log(content);

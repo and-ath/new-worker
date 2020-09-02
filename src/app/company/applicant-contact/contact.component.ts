@@ -21,6 +21,8 @@ enum SubjectTypes {
 export class ContactComponent implements OnInit {
   readonly subjectTypes = SubjectTypes;
 
+  fileToUpload: File = null;
+
   constructor(
     private router: Router,
     private loadingDialog: LoadingDialogService,
@@ -34,7 +36,8 @@ export class ContactComponent implements OnInit {
     email: string,
     subject: string,
     body: string,
-    subjectType: SubjectTypes,
+    file: string,
+    subjectType: SubjectTypes
   ) {
     const message$ = new BehaviorSubject('送信しています');
 
@@ -63,7 +66,7 @@ export class ContactComponent implements OnInit {
     }
 
     try {
-      await this.api.sendMail('ja', name, email, subject, body, type);
+      await this.api.sendMail('ja', name, email, subject, body, file, type);
     } catch {
       message$.error('エラーが発生しました');
       return;
@@ -73,4 +76,8 @@ export class ContactComponent implements OnInit {
     message$.complete();
     await this.router.navigate(['']);
   }
+
+  handleFileInput(files: FileList) {
+    this.fileToUpload = files.item(0);
+}
 }
